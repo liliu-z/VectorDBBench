@@ -19,6 +19,7 @@ COLORS = [
     "#FDC513",
     "#FE708D",
     "#8773FB",
+    "#fe6a00",
 ]
 LEGEND_RECT_WIDTH = 24
 LEGEND_RECT_HEIGHT = 16

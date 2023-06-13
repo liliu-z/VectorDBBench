@@ -15,6 +15,7 @@ from .pinecone.pinecone import Pinecone
 from .weaviate_cloud.weaviate_cloud import WeaviateCloud
 from .qdrant_cloud.qdrant_cloud import QdrantCloud
 from .zilliz_cloud.zilliz_cloud import ZillizCloud
+from .opensearch.opensearch import OpenSearch
 
 
 class DB(Enum):
@@ -35,7 +36,7 @@ class DB(Enum):
     ElasticCloud = "ElasticCloud"
     QdrantCloud = "QdrantCloud"
     Pinecone = "Pinecone"
-
+    OpenSearch = "OpenSearch"
 
     @property
     def init_cls(self) -> Type[VectorDB]:
@@ -49,6 +50,7 @@ db2client = {
     DB.ElasticCloud: ElasticCloud,
     DB.QdrantCloud: QdrantCloud,
     DB.Pinecone: Pinecone,
+    DB.OpenSearch: OpenSearch,
 }
 
 
