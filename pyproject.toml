@@ -33,6 +33,8 @@ dependencies = [
     "scikit-learn",
     "s3fs",
     "psutil",
+    "alibabacloud_ha3engine",
+    "pyodps",
 ]
 version = "0.0.1"
 

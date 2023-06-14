@@ -12,6 +12,7 @@ from ..models import TaskConfig
 from .clients import (
     api,
     ZillizCloud,
+    OpenSearch,
     Milvus,
     MetricType
 )
@@ -67,7 +68,7 @@ class CaseRunner(BaseModel):
     @property
     def normalize(self) -> bool:
         assert self.db
-        return isinstance(self.db, (Milvus, ZillizCloud)) and \
+        return isinstance(self.db, (Milvus, ZillizCloud, OpenSearch)) and \
             self.ca.dataset.data.metric_type == MetricType.COSINE
 
     def init_db(self, drop_old: bool = True) -> None:
